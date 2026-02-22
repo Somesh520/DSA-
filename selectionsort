@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+void seclectionsort(int arr[]){
+    
+    // isme hum log sab se pahle chote element ko seaech krnege and usjke baad swipe maar denge pahle element se samjhe uske baad continue okau 
+for(int i=0;i<4;i++){
+    int main_index=i;
+    
+    for(int j=i+1;j<4;j++){
+        if(arr[j]<arr[main_index]){
+            main_index=j;
+        }
+    }
+    
+    swap(arr[main_index], arr[i]);
+}
+}
+
+
+
+
+int main(){
+    int arr[4]={69,45,4,5};
+    
+    // sort(arr);
+    seclectionsort(arr);
+    
+    for(int i=0;i<4;i++){
+        cout<<arr[i]<<" ";
+    }
+}
