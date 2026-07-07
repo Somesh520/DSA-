@@ -31,16 +31,16 @@
 
 // new method for this 
 
-const is_palindrone=(str)=>{
-        let st=str.toLowerCase().split(" ").join("");
-        console.log(st);
+// const is_palindrone=(str)=>{
+//         let st=str.toLowerCase().split(" ").join("");
+//         console.log(st);
         
-        let reve=st.split("").reverse().join("");
-        console.log(reve);
+//         let reve=st.split("").reverse().join("");
+//         console.log(reve);
         
-        return st==reve ? "palindrone":"notpalindrone";
-}
+//         return st==reve ? "palindrone":"notpalindrone";
+// }
 
 
 
-console.log(is_palindrone("akana"));
+// console.log(is_palindrone("akana"));
