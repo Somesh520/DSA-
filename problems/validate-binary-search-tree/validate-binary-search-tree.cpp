@@ -16,7 +16,7 @@ public:
             return ;
         }
         inorder(root->left,arr);
-        ans.push_back(root->val);
+        arr.push_back(root->val);
         inorder(root->right,arr);
 
     }
