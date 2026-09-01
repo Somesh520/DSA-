@@ -9,7 +9,7 @@ public:
     }
 
     void capitalize(string &word){
-        if(!word.empty()){
+        if(word.empty()){
             return;
         }
         word[0]=toupper((unsigned char) word[0]);
