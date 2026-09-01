@@ -1,46 +1,53 @@
 class Solution {
 public:
-    void capitalize(string &word){
-        if(word.empty()){
-            return ;
-        }
-        word[0]=toupper((unsigned char )word[0]);
-
-        for(int  i=1;i<word.length();i++){
-            word[i]=tolower((unsigned char)word[i]);
+    void lowercase(string &word){
+        // here we simpley chane the lowercase ok 
+        for(int i=0;i<word.length();i++){
+            word[i]=tolower((unsigned char) word[i]);
         }
 
     }
 
+    void capitalize(string &word){
+        if(!word.empty()){
+            return;
+        }
+        word[0]=toupper((unsigned char) word[0]);
+        for(int i=1;i<word.length();i++){
+            word[i]=tolower((unsigned char)word[i]);
+        }
+
+    }
     string capitalizeTitle(string title) {
-        // first we make and vector....
-        // then we iterate the string an check the size if size is 1 or 2 we simply lowercase the string and 
+        // now we add the the main string stream 
 
-        vector<string>ans;
-        for(int i=0;i<title.length();i++){
-            ans.push_back(title[i]);
-            // we pushed all the string 
+        stringstream ss(title);
+        string word;
+        string ans;
 
-        }
+        while(ss>>word){
 
-        for(int i=0;i<ans.size();i++){
-            // first check the length of array 
-            if(ans[i].length()<2){
-                // we simply lowercase 
-                for(char x:arr[i]){
-                    tolower(x);
-                }
-
+            // now here check the lenght is 2 ,1
+            // if(word.empty()){
+            //     return ;
+            // }
+            if(word.length()<=2){
+                // add the lower funcion 
+                // now lowercase the word 
+                lowercase(word);
             }
-
             else{
-                capitalize(ans[i]);
+                capitalize(word);
             }
+            if(!ans.empty()){
+                ans+=" ";
 
+            }
+            ans+=word;
         }
-        
 
-        // now we check the lenght 
+        return ans;
+
         
     }
 };
